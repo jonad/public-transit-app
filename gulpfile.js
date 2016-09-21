@@ -43,7 +43,7 @@ gulp.task('inject', function(){
 });
 
 // task to serve the files
-gulp.task('serve',  function(){
+gulp.task('serve', ['inject'],  function(){
 
   var options = {
     script: './src/server/app.js',

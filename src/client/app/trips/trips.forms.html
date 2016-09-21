@@ -1,0 +1,57 @@
+<div class="bt-dashboard-header">
+  {{ title }}
+</div>
+<div class="content">
+<form>
+  <div class="form-group">
+    <label for="stationNameList">Station Source</label>
+    <select name="stationNameList" id="stationNameList" ng-model="trip.orig">
+    <option ng-repeat="station in stations track by $index" value="{{ station.abbr }}"> {{ station.name }}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="stationDestList">Station Destination</label>
+    <select name="stationDestList" id="stationDestList" ng-model="trip.dest">
+      <option ng-repeat="station in stations track by $index" value="{{ station.abbr }}"> {{ station.name }}</option>
+    </select>
+  </div>
+  <div class="form-group">
+  <label class="custom-control custom-radio">
+    <input id="dep" name="dep" type="radio" value="depart" class="custom-control-input" ng-model="trip.cmd">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">Departures</span>
+  </label>
+    </div>
+  <div class="form-group">
+  <label class="custom-control custom-radio">
+    <input id="arri" name="arri" type="radio" value="arrive" class="custom-control-input" ng-model="trip.cmd" />
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">Arrivals</span>
+  </label>
+    </div>
+  <div class="form-group">
+    <label for="tripDate" class="col-xs-2 col-form-label">Date</label>
+    <div class="col-xs-10">
+      <input class="form-control" type="date" value="2011-08-19" id="tripDate" ng-model="trip.date">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="tripTime" class="col-xs-2 col-form-label">Time</label>
+    <div class="col-xs-10">
+      <input class="form-control" type="time" value="13:45:00" id="tripTime" ng-model="trip.time">
+    </div>
+  </div>
+  <button type="submit" ng-click= "getSchedule(trip)" class="btn btn-primary">Get Schedule</button>
+</form>
+</div>
+<div>
+  <pre>
+  {{trip | json}}
+</pre>
+</div>
+
+<div>
+  <pre>
+  {{schedules | json}}
+</pre>
+</div>

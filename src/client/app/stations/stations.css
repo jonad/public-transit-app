@@ -1,0 +1,15 @@
+.bt-dashboard-header {
+  font-size: 20px;
+  border-bottom: 1px solid #444;
+  color: white;
+  background-color: #777;
+  margin: -20px;
+  margin-bottom: 20px;
+  min-height: 10px;
+  padding: 8px;
+  padding-left: 20px;
+}
+
+.content {
+  background: white;
+}

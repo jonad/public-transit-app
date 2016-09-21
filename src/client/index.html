@@ -1,49 +1,88 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app='app'>
 <head>
-  <title></title>
+  <title>
 
-  <!-- bower:css -->
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- bower:css -->
   <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.css" />
   <!-- endbower -->
 
-  <!-- bower:js -->
-  <script src="/bower_components/jquery/dist/jquery.js"></script>
-  <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="/bower_components/angular/angular.js"></script>
-  <!-- endbower -->
-
-
-<!-- inject:css -->
-<link rel="stylesheet" href="/src/client/styles/app.css">
-  <link rel="stylesheet" href="/src/client/app/psFramework/psFramework.css">
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/src/client/styles/app.css">
+  <link rel="stylesheet" href="/src/client/app/departures/departures.css">
+  <link rel="stylesheet" href="/src/client/app/layout/layout.css">
+  <link rel="stylesheet" href="/src/client/app/menus/menu.css">
+  <link rel="stylesheet" href="/src/client/app/stations/stations.css">
   <!-- endinject -->
-
-
-
-  <!-- inject:js -->
-
-  <script src="/src/client/app/app.module.js"></script>
-
-  <script src="/src/client/app/psFramework/psFramework.module.js"></script>
-
-  <script src="/src/client/app/psDashboard/psDashboard.js"></script>
-
-  <script src="/src/client/app/psFramework/psFramework.controller.js"></script>
-
-  <script src="/src/client/app/psFramework/psFramework.directive.js"></script>
-
-  <script src="/src/client/app/psMenu/psMenu.js"></script>
-
-  <!-- endinject -->
-
 </head>
-<body  class="container-fluid">
-  <ps-frameworkdir></ps-frameworkdir>
-  <h1>camer</h1>
-
-
-
+<body class="container-fluid">
+<!-- bower:js -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-animate/angular-animate.js"></script>
+<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="/bower_components/x2js/xml2json.min.js"></script>
+<script src="/bower_components/angular-xml/angular-xml.js"></script>
+<script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<!-- endbower-->
+<!-- inject:js  -->
+<script src="/src/client/app/app.module.js"></script>
+<script src="/src/client/app/core/core.module.js"></script>
+<script src="/src/client/app/departures/departures.module.js"></script>
+<script src="/src/client/app/layout/layout.module.js"></script>
+<script src="/src/client/app/logger/logger.module.js"></script>
+<script src="/src/client/app/menus/menus.module.js"></script>
+<script src="/src/client/app/router/router.module.js"></script>
+<script src="/src/client/app/services/services.module.js"></script>
+<script src="/src/client/app/stations/stations.module.js"></script>
+<script src="/src/client/app/trips/trips.module.js"></script>
+<script src="/src/client/app/utils/utils.module.js"></script>
+<script src="/src/client/app/core/config.js"></script>
+<script src="/src/client/app/departures/departures.controller.js"></script>
+<script src="/src/client/app/departures/departures.directive.js"></script>
+<script src="/src/client/app/directives/wwa.departures.directive.js"></script>
+<script src="/src/client/app/directives/wwa.stations.directive.js"></script>
+<script src="/src/client/app/directives/wwa.trips.directive.js"></script>
+<script src="/src/client/app/layout/layout.controller.js"></script>
+<script src="/src/client/app/layout/layout.directive.js"></script>
+<script src="/src/client/app/logger/logger.js"></script>
+<script src="/src/client/app/menus/menu.group.directive.js"></script>
+<script src="/src/client/app/menus/menu.item.directive.js"></script>
+<script src="/src/client/app/menus/menus.controller.js"></script>
+<script src="/src/client/app/menus/menus.directive.js"></script>
+<script src="/src/client/app/router/departures.route.js"></script>
+<script src="/src/client/app/router/router.helper.provider.js"></script>
+<script src="/src/client/app/router/stations.routes.js"></script>
+<script src="/src/client/app/router/trips.routes.js"></script>
+<script src="/src/client/app/services/departures.service.js"></script>
+<script src="/src/client/app/services/stations.service.js"></script>
+<script src="/src/client/app/services/trips.service.js"></script>
+<script src="/src/client/app/stations/stations.controller.js"></script>
+<script src="/src/client/app/stations/stations.directive.js"></script>
+<script src="/src/client/app/trips/trips.controller.js"></script>
+<script src="/src/client/app/trips/trips.directive.js"></script>
+<script src="/src/client/app/utils/utils.js"></script>
+<!-- endinject -->
+<app-layout
+        title="Bay Area Transit"
+        subtitle="Public Transit"
+        icon-file=' "/src/client/images/bart.png" '>
+          <bt-menu>
+              <bt-menu-item label="Departures" icon="fa-paper-plane-o" state="departures"></bt-menu-item>
+              <bt-menu-item label="Stations" icon="fa-train" state="stations"></bt-menu-item>
+              <bt-menu-item label="Plan a trip" icon="fa-suitcase" state="trips"></bt-menu-item>
+              <bt-menu-group label="Account" icon="fa-user">
+                <bt-menu-item label="Profile" icon="fa-user" state="user"></bt-menu-item>
+                <bt-menu-item label="Recent Search" icon="fa-search" state="recent_search"></bt-menu-item>
+                <bt-menu-item label="Recent Trip" icon="fa-suitcase" state="trip"></bt-menu-item>
+              </bt-menu-group>
+          </bt-menu>
+</app-layout>
 </body>
 </html>

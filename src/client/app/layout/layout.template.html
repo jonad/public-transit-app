@@ -1,0 +1,25 @@
+<div class="bt-title-bar">
+  <div class="row">
+    <div class="bt-logo-area col-sm-6">
+      <img class="bt-icon" ng-src="/src/client/images/bart.png"/>
+
+    <div class="bt-title-area">
+      <p class="bt-logo-title">{{ title }}</p>
+      <p class="bt-logo-subtitle">{{ subtitle }}</p>
+    </div>
+
+    <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()"
+              class="bt-collapsed-menu pull-right">
+              <button type="button" class="btn bt-nav-button">
+                <i class="fa fa-bars"></i>
+              </button>
+
+    </div>
+  </div>
+  </div>
+</div>
+<div ng-transclude></div>
+<div ui-view class="bt-view" ng-class="{'bt-view-full-width' : !isMenuVertical || !isMenuVisible }">
+<!--<div ng-view class="bt-view" ng-class="{'bt-view-full-width' : !isMenuVertical || !isMenuVisible }">-->
+
+</div>

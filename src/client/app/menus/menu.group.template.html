@@ -1,0 +1,15 @@
+<li class="bt-selectable-item"
+  ng-click="clicked()"
+  ng-class="{'bt-item-horizontal' : !isVertical()}">
+  <div class="bt-noselect">
+    <i class="fa {{ icon }} bt-menu-icon"></i>
+    {{ label }}
+  </div>
+  <i ng-if="isVertical()"
+  class="fa fa-chevron-left bt-group-indicator-left"
+    ng-class="{ 'fa-rotate-270' : isOpen }"></i>
+</li>
+<div ng-show="isOpen" class="bt-subitem-section bt-fade-in-animation"
+   ng-class="{ 'bt-popup-menu' : !isVertical()}">
+  <ul ng-transclude></ul>
+</div>

@@ -1,0 +1,27 @@
+<div class="bt-dashboard-header">
+  {{ title }}
+</div>
+<div class="content">
+  <form name="stationNames">
+    <label for="stationNameList">Station Names</label>
+    <select name="stationNameList" id="stationNameList" ng-model="currentStation">
+      <option ng-repeat="station in stations track by $index" value="{{ station }}"> {{ station.name }}</option>
+    </select>
+  </form>
+  <button ng-click="getCurrentDepartures()">Get Stations </button> <br >
+  <header><h1>Departures from {{ currentStation.name }}</h1></header>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Destination</th>
+      <th>Estimates</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="departure in currentDepartures track by $index">
+      <td>{{ departure.destination }}</td>
+      <td><span ng-repeat="est in departure.estimate track by $index"> {{ est.minutes }} min | <span></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

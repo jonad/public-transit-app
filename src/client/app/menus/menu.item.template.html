@@ -1,0 +1,9 @@
+<li class="bt-selectable-item"
+      ng-class="{'bt-item-horizontal' : !isVertical()}">
+  <div class="bt-noselect">
+    <i class="fa {{ icon }} bt-menu-icon"></i>
+    {{ label }}
+  </div>
+  <i ng-if="isActive() && isVertical()"
+    class="fa fa-2x fa-caret-left bt-menu-active-indicator"></i>
+</li>

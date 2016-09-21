@@ -1,0 +1,87 @@
+.bt-title-bar{
+  background-color: white;
+  padding: 0 20px;
+  border-bottom: 2px solid black;
+  }
+
+.bt-title-area {
+  display: inline-block;
+}
+
+.bt-logo-area {
+  //text-align: center;
+}
+
+
+.bt-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 8px;
+  vertical-align: top;
+  border: 1px solid #999;
+}
+
+.bt-logo-title {
+  color: #111;
+  margin-top: 6px;
+  font-size: 22px;
+}
+
+.bt-logo-subtitle {
+  font-size: 13px;
+  margin-top: -13px;
+}
+
+@media screen and (max-width: 430px){
+  .bt-icon {
+    display: none;
+  }
+  .bt-logo-title {
+    font-size: 18px;
+  }
+}
+
+.bt-right-side-controls  {
+  line-height : 60px;
+}
+.bt-right-side-controls > div {
+  text-align: right;
+}
+
+.bt-collapsed-menu {
+  display: inline-block;
+  height: 100%;
+}
+
+.bt-nav-button {
+  height: 40px;
+  width: 60px;
+  margin-top: 10px;
+  border: 1px solid #888;
+  padding: 0;
+  font-size: 26px;
+  color: #777;
+}
+
+@media screen and (min-width: 768px){
+  .ts-right-side-controls > div {
+    text-align: right;
+  }
+  .ts-logo-area{
+    text-align: left;
+  }
+}
+
+.bt-view {
+  margin-left: 200px;
+  padding: 20px;
+  background-color: #ccc;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.bt-view-full-width {
+  margin-left: 0;
+}
+

@@ -1,0 +1,9 @@
+<div class="bt-dashboard-header">
+  {{ title }}
+</div>
+<div class="content">
+  <header>We have {{ stations.length }} Stations</header> <br />
+  <ol>
+    <li ng-repeat=" station in stations track by $index "> <a>{{ station.name }} </a></li>
+  </ol>
+</div>

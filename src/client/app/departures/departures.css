@@ -1,0 +1,74 @@
+.bt-departures {
+  margin: 0;
+  width: 100%;
+}
+
+.gridster .gridster-item {
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  background: white;
+}
+
+.bt-widget-header {
+  position: relative;
+  color: white;
+  background-color: #444;
+  font-size: 18px;
+  border-bottom: 1px solid black;
+  min-height: 30px;
+  padding: 8px;
+  padding-top: 4px;
+  padding-bottom: 2px;
+
+}
+
+.content {
+  background: white;
+}
+
+.bt-widget-header-buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.bt-widget-header-buttons .btn {
+  margin: 4px;
+  margin-top: 3px;
+  padding-top: 1px;
+}
+
+.bt-dashboard-header {
+  font-size: 20px;
+  border-bottom: 1px solid #444;
+  color: white;
+  background-color: #777;
+  margin: -20px;
+  margin-bottom: 20px;
+  min-height: 10px;
+  padding: 8px;
+  padding-left: 20px;
+}
+
+.bt-dashboard-controls {
+  float: right;
+}
+
+.bt-widget-menu-area {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  font-size: 22px;
+}
+
+.bt-widget-menu-area .dropdown-menu {
+  left: -20px;
+  padding-left: 15px;
+}
+
+.bt-widget-menu-area a {
+  color: white;
+}
+
+.bt-widget-menu-area i {
+  cursor: pointer;
+}
