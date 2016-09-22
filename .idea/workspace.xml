@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36564030-7de3-4273-a36a-dbf3986503fe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/exception/exception.catcher.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/exception/exception.handler.provider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/exception/exception.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/departures/departures.controller.js" afterPath="$PROJECT_DIR$/src/client/app/departures/departures.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/router/router.helper.provider.js" afterPath="$PROJECT_DIR$/src/client/app/router/router.helper.provider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/router/router.module.js" afterPath="$PROJECT_DIR$/src/client/app/router/router.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/services/departures.service.js" afterPath="$PROJECT_DIR$/src/client/app/services/departures.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/services/services.module.js" afterPath="$PROJECT_DIR$/src/client/app/services/services.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/services/stations.service.js" afterPath="$PROJECT_DIR$/src/client/app/services/stations.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/services/trips.service.js" afterPath="$PROJECT_DIR$/src/client/app/services/trips.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/index.html" afterPath="$PROJECT_DIR$/src/client/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="pubTran.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="departures.service.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="departures.service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/app/services/departures.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="41" column="101" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="101" />
+            <state relative-caret-position="440">
+              <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -81,16 +70,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
               <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trips.routes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/app/router/trips.routes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -126,6 +105,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="trips.service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/app/services/trips.service.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -144,7 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/client/app/directives/wwa.departures.directive.js" />
         <option value="$PROJECT_DIR$/src/client/app/departures/departures.css" />
         <option value="$PROJECT_DIR$/src/client/app/services/data.service.js" />
         <option value="$PROJECT_DIR$/src/client/app/core/stations/stations.template.html" />
@@ -195,6 +183,7 @@
         <option value="$PROJECT_DIR$/src/client/app/services/stations.service.js" />
         <option value="$PROJECT_DIR$/src/client/app/services/departures.service.js" />
         <option value="$PROJECT_DIR$/src/client/app/services/trips.service.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -750,16 +739,16 @@
       <workItem from="1473928423483" duration="2095000" />
       <workItem from="1474304624613" duration="16292000" />
       <workItem from="1474498082116" duration="599000" />
-      <workItem from="1474575289908" duration="10660000" />
+      <workItem from="1474575289908" duration="10939000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64334000" />
+    <option name="totallyTimeSpent" value="64613000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="203" width="1278" height="877" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22195704" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -769,7 +758,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2700637" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2700637" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -991,14 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1161,8 +1142,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/app/services/departures.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="41" column="101" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="101" />
+        <state relative-caret-position="440">
+          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
           <folding />
         </state>
       </provider>
