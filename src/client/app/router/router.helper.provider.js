@@ -19,11 +19,13 @@
     var config = {
       docTitle: 'Bart App: ',
       resolveAlways: {
-        stations : function(stationsService) {
-          return stationsService.getStations();
-        }
+        stations : stations
       }
     };
+
+    function stations(stationsService) {
+      return stationsService.getStations();
+    }
 
 
 

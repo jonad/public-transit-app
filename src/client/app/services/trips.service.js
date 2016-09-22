@@ -27,10 +27,20 @@
       var cmdType = config.urls.schedules;
       var url = utils.buildUrl(params, cmdType);
       return $http.get(url, configuration)
-        .then(function(data){
+        .then(getTripSuccess)
+        .catch(getTripFailed);
 
-          return data.data;
-        });
+      function getTripSucess(data){
+        if (data.data.root.message) {
+          getDeparturesFailed(data);
+        }
+        return data.data;
+      }
+
+      function getTripFailed(e){
+        return exceptionCatcher.catcher('Failed to get Trip data')(e.data.root.message.error);
+
+      }
     }
 
 

@@ -4,9 +4,9 @@
 
   angular.module('services').factory('stationsService', stationsService);
 
-  stationsService.$inject = ['config', '$http', 'utils'];
+  stationsService.$inject = ['config', '$http', 'utils', 'exceptionCatcher'];
 
-  function stationsService(config, $http, utils){
+  function stationsService(config, $http, utils, exceptionCatcher){
 
 
      var service = {
@@ -28,17 +28,29 @@
         var cmdType = config.urls.stations;
        var url = utils.buildUrl(params, cmdType);
       return $http.get(url, configuration)
-                        .then(function(data){
+                  .then(stationListSucess)
+                  .catch(stationListFailed);
+                        // .then(function(data){
+                        //
+                        //   console.log("data", data.data);
+                        //   console.log("data", data.data);
+                        //
+                        //   return data.data.root.stations.station;
+                        //
+                        // });
 
-                          console.log("data", data.data);
-                          console.log("data", data.data);
+       function stationListSucess(data){
+         if (!data.data.root.message) {
+           stationListFailed(data);
+         }
+         return data.data.root.stations.station;
 
-                          return data.data.root.stations.station;
+       }
 
-                        });
+       function stationListFailed(e){
+         return exceptionCatcher.catcher('Failed to get stations Data')(e.data.root.message.error);
+       }
      }
-
-
 
 }
 }
