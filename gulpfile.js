@@ -55,7 +55,7 @@ gulp.task('clean-styles', function(){
   clean(files);
 });
 
-gulp.task('optimize', ['inject', 'fonts', 'images'], function(){
+gulp.task('optimize', ['inject'git , 'fonts', 'images'], function(){
 
   log('Optimizing the javascript, css, html');
 
@@ -355,3 +355,4 @@ function clean(path){
   del(path);
 }
 
+gulp.task('heroku:production', ['serve-build']);

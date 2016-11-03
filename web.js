@@ -7,5 +7,5 @@ var express = require('express');
 var gzippo = require('gzippo');
 var app = express();
 
-app.use(gzippo.staticGzip('build'));
+app.use(gzippo.staticGzip('./build'));
 app.listen(process.env.PORT || 5000);
