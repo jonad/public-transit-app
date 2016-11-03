@@ -55,7 +55,7 @@ gulp.task('clean-styles', function(){
   clean(files);
 });
 
-gulp.task('optimize', ['inject'git , 'fonts', 'images'], function(){
+gulp.task('optimize', ['inject' , 'fonts', 'images'], function(){
 
   log('Optimizing the javascript, css, html');
 
@@ -109,7 +109,7 @@ gulp.task('templatecache', ['clean-code'], function(){
   log('Creating AngularJS $templateCache');
 
   return gulp
-          .src(config.htmltemplates) // TODO
+          .src(config.htmltemplates)
           .pipe($.minifyHtml({empty: true}))
           .pipe($.angularTemplatecache(config.templateCache.file,
                 config.templateCache.options))
@@ -238,56 +238,6 @@ function startBrowserSync(isDev){
 
 
 
-// task to automatically add dependency in the main file html
-// gulp.task('inject', function(){
-//   var wiredep = require('wiredep').stream;
-//   var injectFiles = ['./src/client/app/**/*.js', './src/client/**/*.css'];
-//   var jsOrder =  [
-//     '**/app.module.js',
-//     '**/*.module.js',
-//     '**/*.js',
-//     '**/app.css',
-//     '**/*.css'
-//   ];
-//
-//   var wiredepOptions = {
-//     bowerJson: require('./bower.json'),
-//     directory : './bower_components',
-//     ignorePath: '../..'
-//   };
-//
-//   var injectSrc = gulp.src(injectFiles, {read: false});
-//
-//   return gulp.src('./src/client/index.html')
-//             .pipe(wiredep(wiredepOptions))
-//             .pipe($.inject(orderSrc(injectFiles, jsOrder)))
-//             .pipe(gulp.dest('./src/client'));
-// });
-
-// task to serve the files
-
-
-
-// gulp.task('serve', ['inject'],  function(){
-//
-//   var options = {
-//     script: './src/server/app.js',
-//     delay: 1,
-//     env: {
-//       'PORT': 3000
-//     }
-//
-//   };
-//
-//   return $.nodemon(options)
-//           .on('restart', function(ev){
-//             console.log('restarting ...');
-//           });
-//
-//
-// });
-
-
 /////
 
 function serve(isDev){
@@ -355,4 +305,4 @@ function clean(path){
   del(path);
 }
 
-gulp.task('heroku:production', ['serve-build']);
+//gulp.task('heroku:production', ['serve-build']);
