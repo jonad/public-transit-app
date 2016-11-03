@@ -3,20 +3,21 @@
 
   angular.module('departures').controller('departuresController', departuresController);
 
-  departuresController.$inject = ['stations', '$scope', 'departuresService'];
+  departuresController.$inject = ['stations', 'departuresService'];
 
-  function departuresController(stations, $scope, departuresService){
-    console.log("stations ", stations);
-    $scope.stations = stations;
-    $scope.currentStation = { };
-   $scope.currentDepartures = { };
+  function departuresController(stations, departuresService){
+    var vm = this;
 
-   $scope.getCurrentDepartures =  function (){
+    vm.stations = stations;
+    vm.currentStation = { };
+   vm.currentDepartures = { };
 
-     departuresService.getCurrentDepartures(JSON.parse($scope.currentStation))
+   vm.getCurrentDepartures =  function (){
+
+     departuresService.getCurrentDepartures(JSON.parse(vm.currentStation))
        .then(function(data){
-         $scope.currentStation = JSON.parse($scope.currentStation);
-        $scope.currentDepartures = data.root.station.etd;
+         vm.currentStation = JSON.parse(vm.currentStation);
+        vm.currentDepartures = data.root.station.etd;
        });
    }
 

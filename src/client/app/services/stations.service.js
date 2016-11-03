@@ -30,17 +30,9 @@
       return $http.get(url, configuration)
                   .then(stationListSucess)
                   .catch(stationListFailed);
-                        // .then(function(data){
-                        //
-                        //   console.log("data", data.data);
-                        //   console.log("data", data.data);
-                        //
-                        //   return data.data.root.stations.station;
-                        //
-                        // });
 
        function stationListSucess(data){
-         if (!data.data.root.message) {
+         if (data.data.root.message) {
            stationListFailed(data);
          }
          return data.data.root.stations.station;

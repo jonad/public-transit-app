@@ -17,6 +17,21 @@
       //   broadcastMenuState();
       // } );
 
+    var checkWidth = function(){
+      var width = Math.max($($window).innerWidth(), $window.innerWidth);
+      $scope.isMenuVisible = (width > 768);
+      $scope.isMenuButtonVisible = !$scope.isMenuVisible;
+    };
+
+    var broadcastMenuState = function() {
+      $rootScope.$broadcast('bt-menu-show', {
+        show : $scope.isMenuVisible,
+        isVertical: $scope.isMenuVertical,
+        allowHorizontalToggle: !$scope.isMenuButtonVisible
+      });
+    };
+
+
     $scope.$on('bt-menu-item-selected-event', function(evt, data){
       $scope.state = data.state;
       $state.go(data.state);
@@ -39,11 +54,7 @@
         $($window).off('resize.layout');
       });
 
-      var checkWidth = function(){
-        var width = Math.max($($window).innerWidth(), $window.innerWidth);
-        $scope.isMenuVisible = (width > 768);
-        $scope.isMenuButtonVisible = !$scope.isMenuVisible;
-      };
+
 
       $scope.menuButtonClicked = function(){
         $scope.isMenuVisible = !$scope.isMenuVisible;
@@ -51,13 +62,6 @@
         $scope.$apply();
       };
 
-      var broadcastMenuState = function() {
-        $rootScope.$broadcast('bt-menu-show', {
-            show : $scope.isMenuVisible,
-            isVertical: $scope.isMenuVertical,
-            allowHorizontalToggle: !$scope.isMenuButtonVisible
-        });
-      };
 
       $timeout(function() {
         checkWidth();

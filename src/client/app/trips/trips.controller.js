@@ -3,23 +3,25 @@
 
   angular.module('trips').controller('tripsController', tripsController);
 
-  tripsController.$inject = ['stations', '$scope', 'tripsService', 'logger'];
+  tripsController.$inject = ['stations', 'tripsService', 'logger'];
 
-  function tripsController(stations, $scope, tripsService, logger){
+  function tripsController(stations, tripsService, logger){
+    var vm = this;
 
-    $scope.stations = stations;
-    console.log("in trips : " , stations);
-   $scope.trip = {};
-   $scope.schedules = {};
+    vm.stations = stations;
+    console.log('in trips : ' , stations);
+   vm.trip = {};
+   //vm.schedules = {};
 
-   $scope.getSchedule = function() {
-      logger.error("inside schedule controller ", $scope.trip);
-     tripsService.getSchedule($scope.trip)
-       .then(function(data){
-         $scope.schedules = data;
-       });
-
-   }
+   vm.getSchedule = function() {
+     // tripsService.getSchedule(vm.trip)
+     //   .then(function(data){
+        // vm.schedules = data;
+         $state.go('trip_detail', {
+           trip : vm.trip
+         });
+       //});
+   };
   }
 
 })();

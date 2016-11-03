@@ -16,7 +16,7 @@
     // application level errors
     function catcher(message) {
       return function (e) {
-        var newMessage = message + ': ' + e.text;
+        var newMessage = message + ': ' + e;
         logger.error(newMessage, e);
         return $q.reject(newMessage);
       };

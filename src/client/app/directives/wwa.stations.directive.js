@@ -9,7 +9,7 @@
       var directive = {
         template: '<bt-stations></bt-stations>',
         link : function(scope){
-          scope.title = 'Stations List'
+          scope.title = 'Stations List';
         }
       };
 

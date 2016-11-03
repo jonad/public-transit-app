@@ -17,7 +17,8 @@
         config: {
           url: '/',
           template: '<wwa-departures></wwa-departures>',
-          controller: 'departuresController'
+          controller: 'departuresController',
+          controllerAs: 'vm'
 
         }
       }

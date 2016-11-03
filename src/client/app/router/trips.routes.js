@@ -18,9 +18,19 @@
         config: {
           url: '/trips',
           template: '<wwa-trips></wwa-trips>',
-          controller: 'tripsController'
+          controller: 'tripsController',
+          controllerAs: 'vm'
         }
-      }
+      },
+      {
+        state: 'trip_detail',
+        config: {
+          url: '/trip_detail',
+          template: '/src/client/app/trips/trip.detail.html',
+          controller: 'tripDetail',
+          controllerAs: 'vm'
+        }
+      },
 
     ];
   }

@@ -1,9 +1,10 @@
 <div class="bt-dashboard-header">
   {{ title }}
 </div>
-<div class="content">
-  <header>We have {{ stations.length }} Stations</header> <br />
-  <ol>
-    <li ng-repeat=" station in stations track by $index "> <a>{{ station.name }} </a></li>
-  </ol>
+<div class="list-group">
+  <a href="#" class="list-group-item active">We have {{ vm.stations.length }} Stations</a>
+
+    <a href="#" class="list-group-item action" ng-repeat=" station in vm.stations track by $index "> {{ station.name }} </a>
+
 </div>
+

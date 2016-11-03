@@ -5,8 +5,8 @@
   angular.module('services').factory('tripsService', tripsService);
 
 
-  tripsService.$inject = ['$http', 'config', 'utils'];
-  function tripsService($http, config, utils){
+  tripsService.$inject = ['$http', 'config', 'utils', 'exceptionCatcher'];
+  function tripsService($http, config, utils, exceptionCatcher){
 
     var service = {
       getSchedule : getSchedule
@@ -30,11 +30,12 @@
         .then(getTripSuccess)
         .catch(getTripFailed);
 
-      function getTripSucess(data){
-        if (data.data.root.message) {
-          getDeparturesFailed(data);
+      function getTripSuccess(data){
+        if (data.data.root.message.error) {
+          getTripFailed(data);
+        } else {
+          return data.data;
         }
-        return data.data;
       }
 
       function getTripFailed(e){

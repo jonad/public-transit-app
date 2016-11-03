@@ -18,7 +18,8 @@
         config: {
           url: '/stations',
           template: '<wwa-stations></wwa-stations>',
-          controller: 'stationsController'
+          controller: 'stationsController',
+          controllerAs: 'vm'
         }
       }
 

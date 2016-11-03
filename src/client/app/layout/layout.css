@@ -76,7 +76,7 @@
 .bt-view {
   margin-left: 200px;
   padding: 20px;
-  background-color: #ccc;
+  background-color: white;
   min-height: 100vh;
   overflow: auto;
 }

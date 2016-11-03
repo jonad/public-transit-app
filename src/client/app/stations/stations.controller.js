@@ -3,10 +3,11 @@
 
   angular.module('stations').controller('stationsController', stationsController);
 
-  stationsController.$inject = ['stations', '$scope'];
+  stationsController.$inject = ['stations'];
 
-  function stationsController(stations, $scope){
+  function stationsController(stations){
+    var vm = this;
     console.log("stations ", stations);
-    $scope.stations = stations;
+    vm.stations = stations;
   }
 })();
