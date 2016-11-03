@@ -6,24 +6,27 @@
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
-  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <!-- build:css styles/lib.css -->
+  <!-- build:css ./styles/lib.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.css" />
   <!-- endbower -->
   <!-- endbuild -->
 
-  <!-- build:css styles/app.css-->
+  <!-- build:css ./styles/app.css-->
   <!-- inject:css -->
-  <link rel="stylesheet" href="/tmp/styles/styles.css">
+  <link rel="stylesheet" href="/tmp/styles/styles/styles.css">
+  <link rel="stylesheet" href="/tmp/styles/app/departures/departures.css">
+  <link rel="stylesheet" href="/tmp/styles/app/menus/menu.css">
+  <link rel="stylesheet" href="/tmp/styles/app/stations/stations.css">
+  <link rel="stylesheet" href="/tmp/styles/app/layout/layout.css">
   <!-- endinject -->
   <!-- endbuild -->
 
 </head>
 <body class="container-fluid">
 
-<!-- build:js js/lib.js -->
+<!-- build:js ./js/lib.js -->
 <!-- bower:js -->
 <script src="/bower_components/jquery/dist/jquery.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
@@ -36,13 +39,13 @@
 <!-- endbower-->
 <!-- endbuild -->
 
-<!-- build:js js/app.js-->
+<!-- build:js ./js/app.js-->
 <!-- inject:js  -->
 <script src="/src/client/app/app.module.js"></script>
 <script src="/src/client/app/core/core.module.js"></script>
 <script src="/src/client/app/departures/departures.module.js"></script>
-<script src="/src/client/app/layout/layout.module.js"></script>
 <script src="/src/client/app/exception/exception.module.js"></script>
+<script src="/src/client/app/layout/layout.module.js"></script>
 <script src="/src/client/app/logger/logger.module.js"></script>
 <script src="/src/client/app/menus/menus.module.js"></script>
 <script src="/src/client/app/router/router.module.js"></script>
@@ -56,10 +59,10 @@
 <script src="/src/client/app/directives/wwa.departures.directive.js"></script>
 <script src="/src/client/app/directives/wwa.stations.directive.js"></script>
 <script src="/src/client/app/directives/wwa.trips.directive.js"></script>
-<script src="/src/client/app/layout/layout.controller.js"></script>
-<script src="/src/client/app/layout/layout.directive.js"></script>
 <script src="/src/client/app/exception/exception.catcher.js"></script>
 <script src="/src/client/app/exception/exception.handler.provider.js"></script>
+<script src="/src/client/app/layout/layout.controller.js"></script>
+<script src="/src/client/app/layout/layout.directive.js"></script>
 <script src="/src/client/app/logger/logger.js"></script>
 <script src="/src/client/app/menus/menu.group.directive.js"></script>
 <script src="/src/client/app/menus/menu.item.directive.js"></script>
@@ -82,6 +85,7 @@
 
 
 <!-- inject:templates:js -->
+
 <!-- endinject -->
 
 <!-- endbuild -->
@@ -89,7 +93,7 @@
 <app-layout
         title="Bay Area Transit"
         subtitle="Public Transit"
-        icon-file=' "/src/client/images/bart.png" '>
+        icon-file=' "/images/bart.png" '>
           <bt-menu>
               <bt-menu-item label="Departures" icon="fa-paper-plane-o" state="departures"></bt-menu-item>
               <bt-menu-item label="Stations" icon="fa-train" state="stations"></bt-menu-item>

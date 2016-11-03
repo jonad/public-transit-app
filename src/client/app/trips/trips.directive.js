@@ -7,7 +7,7 @@
   function btTrips(){
 
     var directive = {
-      templateUrl: '/src/client/app/trips/trips.forms.html',
+      templateUrl: 'app/trips/trips.forms.html',
       link: function(scope, element, attrs){
 
       }

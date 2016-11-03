@@ -13,7 +13,7 @@
         iconFile: '='
       },
       controller: 'layoutController',
-      templateUrl: '/src/client/app/layout/layout.template.html'
+      templateUrl: 'app/layout/layout.template.html'
     };
 
     return directive;

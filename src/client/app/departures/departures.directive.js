@@ -7,7 +7,7 @@
         function btDepartures(){
 
           var directive = {
-            templateUrl: '/src/client/app/departures/departures.template.html',
+            templateUrl: 'app/departures/departures.template.html',
             link: function(scope, element, attrs){
 
           }

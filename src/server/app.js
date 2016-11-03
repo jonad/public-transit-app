@@ -9,8 +9,8 @@ var router = require('./routes');
 switch (environment){
   case 'build':
     console.log('** Build **');
-    app.use(gzippo.staticGzip('build'));
-    //app.use('/*', express.static('./build/index.html'));
+    app.use(express.static('./build/'));
+    app.use('/*', express.static('./build/index.html'));
     break;
   default:
     app.use(express.static('./'));

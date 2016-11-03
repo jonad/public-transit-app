@@ -12,7 +12,7 @@
             icon: '@',
             state: '@'
           },
-          templateUrl: '/src/client/app/menus/menu.item.template.html',
+          templateUrl: 'app/menus/menu.item.template.html',
           link: function(scope, el, attr, ctrl){
 
             scope.isActive = function() {

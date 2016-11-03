@@ -29,12 +29,12 @@ module.exports = function(){
 
     ],
 
-    css : temp + 'styles/styles.css',
+    css : temp + '**/*.css',
 
-    less : client + 'styles/styles.less',
+    less : client + '**/*.less',
     server : server,
     htmltemplates: clientApp + '**/*.html',
-    images : client + 'images/**/*.*',
+    images : './images/**/*.*',
     fonts: './bower_components/components-font-awesome/fonts/**/*.*',
 
     /**

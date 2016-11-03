@@ -2,13 +2,11 @@
   "name": "Framework",
   "description": "Angular getting started",
   "version": "0.0.0",
-  "main" : "web.js",
+  "main" : "app.js",
   "scripts": {
     "init": "npm install",
     "install": "bower install",
-
-    "start": "node web.js",
-
+    "start": "node src/server/app.js",
     "test": "gulp test"
   },
   "dependencies": {

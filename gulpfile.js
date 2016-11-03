@@ -76,17 +76,17 @@ gulp.task('optimize', ['inject' , 'fonts', 'images'], function(){
           .pipe($.csso())
           .pipe(cssFilter.restore)
           .pipe(jsLibFilter)
-          .pipe($.uglify())
+          //.pipe($.uglify())
           .pipe(jsLibFilter.restore)
           .pipe(jsAppFilter)
-          .pipe($.ngAnnotate())
-          .pipe($.uglify())
-          .pipe(jsAppFilter.restore)
-          .pipe($.rev())
-          .pipe($.revReplace())
+         // .pipe($.ngAnnotate())
+          //.pipe($.uglify())
+         .pipe(jsAppFilter.restore)
+          //.pipe($.rev())
+          //.pipe($.revReplace())
           .pipe(gulp.dest(config.build))
-          .pipe($.rev.manifest())
-          .pipe(gulp.dest(config.build));
+         // .pipe($.rev.manifest())
+         // .pipe(gulp.dest(config.build));
 
 });
 gulp.task('clean-fonts', function(){

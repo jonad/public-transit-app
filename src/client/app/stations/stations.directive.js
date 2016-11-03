@@ -7,7 +7,7 @@
   function btStations(){
 
     var directive = {
-      templateUrl: '/src/client/app/stations/stations.template.html',
+      templateUrl: 'app/stations/stations.template.html',
       link: function(scope, element, attrs){
 
       }

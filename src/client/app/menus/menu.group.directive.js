@@ -11,7 +11,7 @@
         label: '@',
         icon: '@'
       },
-      templateUrl: '/src/client/app/menus/menu.group.template.html',
+      templateUrl: 'app/menus/menu.group.template.html',
       link: function(scope, el, attrs, ctrl){
         scope.isOpen = false;
         scope.closeMenu = function() {
