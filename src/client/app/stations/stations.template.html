@@ -2,9 +2,18 @@
   {{ title }}
 </div>
 <div class="list-group">
-  <a href="#" class="list-group-item active">We have {{ vm.stations.length }} Stations</a>
+  <div><a href="#" class="list-group-item active"><span class="col-lg-offset-5"><b>We have {{ vm.stations.length }} Stations</b></span></a></div>
+  <br />
 
-    <a href="#" class="list-group-item action" ng-repeat=" station in vm.stations track by $index "> {{ station.name }} </a>
+
+  <div class="panel panel-primary col-md-4" ng-repeat="station in vm.group track by $index ">
+    <div class="panel-heading">Stations</div>
+      <div class="panel-body">
+        <ul>
+          <li ng-repeat=" item in station track by $index">{{ item }}</li>
+        </ul>
+      </div>
+  </div>
 
 </div>
 

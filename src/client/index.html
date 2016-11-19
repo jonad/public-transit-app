@@ -8,18 +8,18 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <!-- build:css ./styles/lib.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.css" />
   <!-- endbower -->
   <!-- endbuild -->
 
   <!-- build:css ./styles/app.css-->
   <!-- inject:css -->
+  <link rel="stylesheet" href="/tmp/styles/styles/paper.css">
   <link rel="stylesheet" href="/tmp/styles/styles/styles.css">
   <link rel="stylesheet" href="/tmp/styles/app/departures/departures.css">
+  <link rel="stylesheet" href="/tmp/styles/app/layout/layout.css">
   <link rel="stylesheet" href="/tmp/styles/app/menus/menu.css">
   <link rel="stylesheet" href="/tmp/styles/app/stations/stations.css">
-  <link rel="stylesheet" href="/tmp/styles/app/layout/layout.css">
   <!-- endinject -->
   <!-- endbuild -->
 
@@ -29,7 +29,6 @@
 <!-- build:js ./js/lib.js -->
 <!-- bower:js -->
 <script src="/bower_components/jquery/dist/jquery.js"></script>
-<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="/bower_components/angular/angular.js"></script>
 <script src="/bower_components/angular-animate/angular-animate.js"></script>
 <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
@@ -49,8 +48,8 @@
 <script src="/src/client/app/logger/logger.module.js"></script>
 <script src="/src/client/app/menus/menus.module.js"></script>
 <script src="/src/client/app/router/router.module.js"></script>
-<script src="/src/client/app/services/services.module.js"></script>
 <script src="/src/client/app/stations/stations.module.js"></script>
+<script src="/src/client/app/services/services.module.js"></script>
 <script src="/src/client/app/trips/trips.module.js"></script>
 <script src="/src/client/app/utils/utils.module.js"></script>
 <script src="/src/client/app/core/config.js"></script>
@@ -72,11 +71,11 @@
 <script src="/src/client/app/router/router.helper.provider.js"></script>
 <script src="/src/client/app/router/stations.routes.js"></script>
 <script src="/src/client/app/router/trips.routes.js"></script>
+<script src="/src/client/app/stations/stations.controller.js"></script>
+<script src="/src/client/app/stations/stations.directive.js"></script>
 <script src="/src/client/app/services/departures.service.js"></script>
 <script src="/src/client/app/services/stations.service.js"></script>
 <script src="/src/client/app/services/trips.service.js"></script>
-<script src="/src/client/app/stations/stations.controller.js"></script>
-<script src="/src/client/app/stations/stations.directive.js"></script>
 <script src="/src/client/app/trips/trip.detail.controller.js"></script>
 <script src="/src/client/app/trips/trips.controller.js"></script>
 <script src="/src/client/app/trips/trips.directive.js"></script>

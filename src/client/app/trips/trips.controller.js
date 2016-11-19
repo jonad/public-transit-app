@@ -14,13 +14,13 @@
    //vm.schedules = {};
 
    vm.getSchedule = function() {
-     // tripsService.getSchedule(vm.trip)
-     //   .then(function(data){
-        // vm.schedules = data;
+     tripsService.getSchedule(vm.trip)
+       .then(function(data){
+        vm.schedules = data;
          $state.go('trip_detail', {
            trip : vm.trip
          });
-       //});
+       });
    };
   }
 

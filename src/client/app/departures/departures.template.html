@@ -5,20 +5,19 @@
   <div class="row">
   <form class="form-inline" name="stationNames">
     <div class="form-group">
-      <label class="control-label bt-logo-title" for="stationNameList"><strong>Station Names</strong></label>
+      <label class="control-label bt-logo-title bt-label-title" for="stationNameList"><strong>Station Names</strong></label>
         <select class="form-control selectpicker" name="stationNameList" id="stationNameList" ng-model="vm.currentStation">
           <option ng-repeat="station in vm.stations track by $index" value="{{ station }}"> {{ station.name }}</option>
         </select>
       </div>
     <button type="submit" class="btn btn-primary" ng-click="vm.getCurrentDepartures()">Get Stations </button> <br >
   </form>
-
   </div><br />
   <div class="row">
     <div class="panel panel-default">
-      <div class="panel-heading"> Departures from {{ vm.currentStation.name }}</div>
+      <div class="panel-heading bt-panel-title"> Departures from {{ vm.currentStation.name }}</div>
       <table class="table">
-        <thead>
+        <thead class="bt-table-head">
           <tr>
             <th><strong>Destination<strong></th>
             <th><strong>Estimates<strong></th>
