@@ -7,7 +7,7 @@
   var config = {
      appErrorPrefix: '[Public Transit Error] ',
      appTitle: 'Public Transit App',
-     key :  'QL4I-PMEK-9PRT-DWE9',
+     key :  'lol',
      urls : {
        root :  'http://api.bart.gov/api/',
        advisories : 'bsa.aspx?',
